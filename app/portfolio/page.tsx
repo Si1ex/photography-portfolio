@@ -1,7 +1,10 @@
 import { Navigation } from "@/components/navigation"
 
 const portfolioImages = [
-  { id: 1, src: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", alt: "Portrait Photography" },
+  { id: 1, 
+    src: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", 
+    alt: "Portrait Photography" 
+  },
   {
     id: 2,
     src: "https://res.cloudinary.com/demo/image/upload/c_scale,w_800/v1371281596/sample.jpg",
