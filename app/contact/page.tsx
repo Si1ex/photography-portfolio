@@ -115,7 +115,7 @@ export default function ContactPage() {
             </div>
 
             <div className="pt-6">
-              <h3 className="text-lg font-semibold mb-3">Follow My Work</h3>
+              <h3 className="text-lg font-semibold mb-3">Follow Me</h3>
               <div className="flex space-x-4">
                 <a href="https://instagram.com/daniel.photogrphy" className="text-muted-foreground hover:text-primary transition-colors">
                   Instagram
