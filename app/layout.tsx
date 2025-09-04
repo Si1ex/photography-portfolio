@@ -3,12 +3,14 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Suspense } from "react"
 import "./globals.css"
 
+
 export const metadata: Metadata = {
   title: "Daniel Kurhinen - Photography Portfolio",
-  description: "Professional photography portfolio by Daniel Kurhinen",
+  description: "Photography portfolio by Daniel Kurhinen",
   generator: "v0.app",
 }
 
