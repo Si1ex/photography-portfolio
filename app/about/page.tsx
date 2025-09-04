@@ -30,8 +30,8 @@ export default function AboutPage() {
               <p>
                 Hello. My name is Daniel Kurhinen, and I am a 25-year-old student from Kuopio, Finland. I have been interested in photography 
                 since I was a kid, always trying to capture moments through a lens. As I grew older, my interest turned into a passion, and 
-                in the spring of 2025 I finally decided to invest in my first camera. Until then, I photographed only with my phone. Getting 
-                a real camera opened up a whole new way of capturing the world around me and became the next big step forward in my photography journey.
+                in the spring of 2025 I finally decided to buy my first camera. Before that, I photographed only with my phone. Getting
+                a real camera was the next big step forward in my photography journey.
               </p>
               <p>
                 What I enjoy most about photography is the freedom of creativity. It allows me to see things from different perspectives and 
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 For me, photography is not just about taking pictures — it’s about expressing emotions and sharing a piece of how I see the world.
               </p>
               <p>
-                My goal is to continue developing as a photographer and to keep learning with every shoot. On this website, you can explore my portfolio,
+                My goal is to continue developing as a photographer and to keep learning with every photo. On this website, you can explore my portfolio,
                 see some of my favorite works, and if you like what you see, don’t hesitate to get in touch. I’m always open to new projects and collaborations.
               </p>
             </div>
