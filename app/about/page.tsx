@@ -8,7 +8,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <div className="pt-16 pb-12 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">About Me</h1>
+          <h1 className="text-4xl md:text-5xl font-bold my-5 text-balance">About Me</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Get to know the person behind the lens
           </p>
@@ -28,51 +28,20 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold">Daniel Kurhinen</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                With over a decade of experience in photography, I specialize in capturing the essence of moments that
-                matter most. My journey began with a simple fascination for light and shadow, which has evolved into a
-                passionate pursuit of visual storytelling.
+                Hello. My name is Daniel Kurhinen, and I am a 25-year-old student from Kuopio, Finland. I have been interested in photography 
+                since I was a kid, always trying to capture moments through a lens. As I grew older, my interest turned into a passion, and 
+                in the spring of 2025 I finally decided to invest in my first camera. Until then, I photographed only with my phone. Getting 
+                a real camera opened up a whole new way of capturing the world around me and became the next big step forward in my photography journey.
               </p>
               <p>
-                I believe that every photograph should tell a story, evoke emotion, and preserve memories that last a
-                lifetime. Whether it's the intimate moments of a wedding, the raw beauty of nature, or the dynamic
-                energy of urban life, I strive to create images that resonate with authenticity and artistic vision.
+                What I enjoy most about photography is the freedom of creativity. It allows me to see things from different perspectives and 
+                notice details I might otherwise overlook. With my photos, I try to convey the atmosphere and the story behind each moment. 
+                For me, photography is not just about taking pictures — it’s about expressing emotions and sharing a piece of how I see the world.
               </p>
               <p>
-                My approach combines technical expertise with creative intuition, ensuring that each shot captures not
-                just what the eye sees, but what the heart feels. I work closely with my clients to understand their
-                vision and bring it to life through my lens.
+                My goal is to continue developing as a photographer and to keep learning with every shoot. On this website, you can explore my portfolio,
+                see some of my favorite works, and if you like what you see, don’t hesitate to get in touch. I’m always open to new projects and collaborations.
               </p>
-            </div>
-
-            {/* Skills */}
-            <div className="pt-6">
-              <h3 className="text-xl font-semibold mb-4">Specializations</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Portrait Photography</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Wedding Photography</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Landscape Photography</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Event Photography</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Commercial Photography</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Street Photography</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

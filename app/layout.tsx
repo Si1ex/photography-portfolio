@@ -14,14 +14,15 @@ export const metadata: Metadata = {
   generator: "v0.app",
 }
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}> 
         <Suspense fallback={null}>
             {children}
             <Analytics />

@@ -25,7 +25,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto text-pretty">
             Capturing moments that tell stories through the lens of creativity and passion
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-4xl">
             <Link href="/portfolio">View Portfolio</Link>
           </Button>
         </div>

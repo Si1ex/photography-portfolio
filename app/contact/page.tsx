@@ -1,9 +1,65 @@
+"use client"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
+
+import { useState } from "react"
+
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+  const [error, setError] = useState("")
+  const [success, setSuccess] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  function validateEmail(email: string) {
+    return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.id]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+    setSuccess("")
+    // Client-side validation
+    if (!form.firstName.trim() || !form.lastName.trim() || !form.email.trim() || !form.subject.trim() || !form.message.trim()) {
+      setError("All fields are required.")
+      return
+    }
+    if (!validateEmail(form.email)) {
+      setError("Please enter a valid email address.")
+      return
+    }
+    setLoading(true)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      const result = await res.json()
+      if (!res.ok) {
+        setError(result.error || "Something went wrong. Please try again.")
+      } else {
+        setSuccess("Message sent successfully!")
+        setForm({ firstName: "", lastName: "", email: "", subject: "", message: "" })
+      }
+    } catch {
+      setError("Network error. Please try again later.")
+    }
+    setLoading(false)
+  }
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -11,7 +67,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="pt-16 pb-12 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Contact</h1>
+          <h1 className="text-4xl md:text-5xl font-bold my-5 text-balance">Contact</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Let's discuss your next photography project
           </p>
@@ -25,10 +81,11 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                I'd love to hear about your project and discuss how we can work together to create something beautiful.
-                Whether you're planning a wedding, need professional portraits, or have a commercial project in mind,
-                let's connect.
+              <p className="text-white leading-relaxed mb-6">
+                I’m open to collaborating with both individuals and brands, whether it’s capturing personal moments or commercial projects. 
+              </p>
+              <p>
+                If you have an idea or project in mind, don’t hesitate to reach out. Let’s create something beautiful together.
               </p>
             </div>
 
@@ -40,7 +97,7 @@ export default function ContactPage() {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                 </div>
-                <span className="text-muted-foreground">daniel@daniel.photography</span>
+                <span className="text-muted-foreground">daniel.kurhinen.photo@gmail.com</span>
               </div>
 
               <div className="flex items-center space-x-3">
@@ -53,30 +110,18 @@ export default function ContactPage() {
                     />
                   </svg>
                 </div>
-                <span className="text-muted-foreground">Helsinki, Finland</span>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-primary-foreground" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                </div>
-                <span className="text-muted-foreground">+358 XX XXX XXXX</span>
+                <span className="text-muted-foreground">Kuopio, Finland</span>
               </div>
             </div>
 
             <div className="pt-6">
               <h3 className="text-lg font-semibold mb-3">Follow My Work</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://instagram.com/daniel.photogrphy" className="text-muted-foreground hover:text-primary transition-colors">
                   Instagram
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Facebook
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  LinkedIn
+                <a href="https://www.tiktok.com/@daniel.photogrphy" className="text-muted-foreground hover:text-primary transition-colors">
+                  TikTok
                 </a>
               </div>
             </div>
@@ -85,19 +130,19 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="bg-card p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium mb-2">
                     First Name
                   </label>
-                  <Input id="firstName" placeholder="John" />
+                  <Input id="firstName" placeholder="John" value={form.firstName} onChange={handleChange} required />
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium mb-2">
                     Last Name
                   </label>
-                  <Input id="lastName" placeholder="Doe" />
+                  <Input id="lastName" placeholder="Doe" value={form.lastName} onChange={handleChange} required />
                 </div>
               </div>
 
@@ -105,14 +150,14 @@ export default function ContactPage() {
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email
                 </label>
-                <Input id="email" type="email" placeholder="john@example.com" />
+                <Input id="email" type="email" placeholder="john@example.com" value={form.email} onChange={handleChange} required />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
                   Subject
                 </label>
-                <Input id="subject" placeholder="Wedding Photography Inquiry" />
+                <Input id="subject" placeholder="Photography Inquiry" value={form.subject} onChange={handleChange} required />
               </div>
 
               <div>
@@ -123,11 +168,17 @@ export default function ContactPage() {
                   id="message"
                   rows={5}
                   placeholder="Tell me about your project, preferred dates, and any specific requirements..."
+                  value={form.message}
+                  onChange={handleChange}
+                  required
                 />
               </div>
 
-              <Button type="submit" className="w-full">
-                Send Message
+              {error && <div className="text-red-600 text-sm mb-2">{error}</div>}
+              {success && <div className="text-green-600 text-sm mb-2">{success}</div>}
+
+              <Button type="submit" className="w-full rounded-4xl" disabled={loading}>
+                {loading ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
