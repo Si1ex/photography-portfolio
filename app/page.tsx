@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">Daniel Kurhinen</h1>
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto text-pretty">
-            Capturing moments that tell stories through the lens of creativity and passion
+            Freezing atmosphere, capturing emotions, and telling stories through my lens
           </p>
           <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-4xl">
             <Link href="/portfolio">View Portfolio</Link>
