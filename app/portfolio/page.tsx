@@ -8,7 +8,7 @@ const portfolioImages = [
   {
     id: 2,
     src: "https://res.cloudinary.com/demo/image/upload/c_scale,w_800/v1371281596/sample.jpg",
-    alt: "Landscape Photography",
+    alt: "Photography",
   },
   {
     id: 3,
