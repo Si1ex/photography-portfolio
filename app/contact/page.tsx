@@ -65,7 +65,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="pt-16 pb-12 bg-muted/30">
+  <div className="pt-16 pb-12 bg-[#18181b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold my-5 text-balance">Contact</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -82,7 +82,8 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <p className="text-white leading-relaxed mb-6">
-                I’m open to collaborating with both individuals and brands, whether it’s capturing personal moments or commercial projects. 
+                I’m open to collaborating with both individuals and brands, whether it’s capturing personal moments or commercial projects.
+                Available in Finnish, English, and Russian.
               </p>
               <p>
                 If you have an idea or project in mind, don’t hesitate to reach out. Let’s create something beautiful together.
