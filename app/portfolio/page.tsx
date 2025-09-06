@@ -6,7 +6,7 @@ const portfolioImages = [
   { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102074/IMG_4309.jpg", alt: "Nature Photography" },
   { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102066/IMG_9312.jpg", alt: "Sunset Photography" },
   { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102071/DSC02800.jpg", alt: "Forest Photography" },
-  { id: 6, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757162842/FullSizeRender.jpg", alt: "Nature Photography" },
+  { id: 6, src: "", alt: "Nature Photography" },
   { id: 7, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_6684.jpg", alt: "Blueberry Photography" },
   { id: 8, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734852/DSC08713_tjeuzo.jpg", alt: "Football Photography" },
   { id: 9, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102069/IMG_2734.jpg", alt: "Northern Lights Photography" },
