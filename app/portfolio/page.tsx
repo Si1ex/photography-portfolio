@@ -27,7 +27,7 @@ const portfolioImages = [
   { id: 24, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143249/DSC04705.jpg", alt: "Street Photography" },
   { id: 25, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143249/DSC05312.jpg", alt: "Football Photography" },
   { id: 26, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143250/DSC04626.jpg", alt: "Street Photography" },
-  { id: 27, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143250/FullSizeRender.jpg", alt: "Street Photography" },
+  { id: 27, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757166679/Tram.jpg", alt: "Street Photography" },
   { id: 28, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143251/DSC01415_SnapseedCopy.jpg", alt: "Nature Photography" },
   { id: 29, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143251/DSC01241.jpg", alt: "Football Photography" },
   { id: 30, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102070/DSC04466.jpg", alt: "Architecture Photography" },
