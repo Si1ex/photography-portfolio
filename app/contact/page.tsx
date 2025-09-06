@@ -65,7 +65,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-  <div className="pt-16 pb-12 bg-[#18181b]">
+      <div className="pt-16 pb-12 bg-[#18181b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold my-5 text-balance">Contact</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -174,9 +174,10 @@ export default function ContactPage() {
                   required
                 />
               </div>
-
-              {error && <div className="text-red-600 text-sm mb-2">{error}</div>}
-              {success && <div className="text-green-600 text-sm mb-2">{success}</div>}
+              <div style={{ minHeight: '24px' }}>
+                {error && <div className="text-red-600 text-sm mb-2">{error}</div>}
+                {success && <div className="text-green-600 text-sm mb-2">{success}</div>}
+              </div>
 
               <Button type="submit" className="w-full rounded-4xl" disabled={loading}>
                 {loading ? "Sending..." : "Send Message"}
