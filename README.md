@@ -36,4 +36,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Author
-Daniel Kurhinen (and v0.app + ChatGPT)
+Daniel Kurhinen
+
+## Credits & Tools Used
+- [v0.app](https://v0.dev) for UI prototyping and code generation
+- ChatGPT for coding assistance and automation
+- [Resend](https://resend.com) for email delivery
+- [Cloudinary](https://cloudinary.com) for image hosting
+- [Namecheap](https://namecheap.com) for domain registration
+- [Vercel](https://vercel.com) for deployment and hosting
+
+## Website Description (for GitHub)
+My own photography portfolio website. Features a modern, responsive design, contact form with email automation, and a dynamic image gallery. Built with Next.js, v0.app, ChatGPT, Resend, Cloudinary, Namecheap, and Vercel.
