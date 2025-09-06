@@ -21,7 +21,7 @@ export default function AboutPage() {
           {/* Image */}
           <div className="relative">
               <img
-                src="https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757162842/FullSizeRender.jpg"
+                src="https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757165262/FullSizeRender.jpg"
                 alt="Daniel Kurhinen"
                 className="rounded-4xl shadow-lg object-cover"
               />
