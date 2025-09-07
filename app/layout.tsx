@@ -1,3 +1,4 @@
+
 import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
@@ -15,13 +16,23 @@ export const metadata: Metadata = {
 }
 
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB9X58GBN0" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-JB9X58GBN0');
+            `,
+          }}
+        />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}> 
         <Suspense fallback={null}>
             {children}
