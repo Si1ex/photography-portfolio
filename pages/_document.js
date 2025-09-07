@@ -5,17 +5,15 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-E7JN7V32K1"
-        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB9X58GBN0" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-E7JN7V32K1');`,
+              gtag('config', 'G-JB9X58GBN0');
+            `,
           }}
         />
       </Head>
