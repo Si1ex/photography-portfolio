@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import Image from "next/image"
 
 const portfolioImages = [
   { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
@@ -55,16 +56,26 @@ export default function PortfolioPage() {
         <div
           className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]"
         >
-          {portfolioImages.map((image) => (
-            <div key={image.id} className="mb-6 break-inside-avoid group hover:shadow-xl transition-all duration-300">
-              <img
-                src={image.src || "/placeholder.svg"}
-                alt={image.alt}
-                className="w-full h-auto rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
-                style={{ display: 'block' }}
-              />
-            </div>
-          ))}
+          {portfolioImages.map((image) => {
+            // Optimize Cloudinary URL for faster loading (width 800, auto format/quality)
+            const optimizedSrc = image.src.includes('cloudinary.com')
+              ? image.src.replace('/upload/', '/upload/w_800,q_auto,f_auto/')
+              : image.src
+            return (
+              <div key={image.id} className="mb-6 break-inside-avoid group hover:shadow-xl transition-all duration-300">
+                <Image
+                  src={optimizedSrc}
+                  alt={image.alt}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto rounded-lg object-contain group-hover:scale-105 transition-transform duration-300"
+                  style={{ display: 'block' }}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
