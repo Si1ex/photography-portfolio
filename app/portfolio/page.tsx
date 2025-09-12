@@ -1,17 +1,19 @@
+"use client"
 import { Navigation } from "@/components/navigation"
 import Image from "next/image"
+import Masonry from "react-masonry-css"
 
 const portfolioImages = [
-  { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
-  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734853/DSC08696_fwwga0.jpg", alt: "Football Photography" },
-  { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102074/IMG_4309.jpg", alt: "Nature Photography" },
-  { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102066/IMG_9312.jpg", alt: "Sunset Photography" },
-  { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102071/DSC02800.jpg", alt: "Forest Photography" },
-  { id: 6, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757166451/Bird.jpg", alt: "Nature Photography" },
-  { id: 7, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_6684.jpg", alt: "Blueberry Photography" },
-  { id: 8, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734852/DSC08713_tjeuzo.jpg", alt: "Football Photography" },
-  { id: 9, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102069/IMG_2734.jpg", alt: "Northern Lights Photography" },
-  { id: 10, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757143252/DSC01592.jpg", alt: "Football Photography" },
+  { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757693600/1F9E0328-7F41-4593-831D-41C5421AF1ED.jpg", alt: "Street Photography" },
+  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
+  { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734853/DSC08696_fwwga0.jpg", alt: "Football Photography" },
+  { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102074/IMG_4309.jpg", alt: "Nature Photography" },
+  { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102066/IMG_9312.jpg", alt: "Sunset Photography" },
+  { id: 6, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102071/DSC02800.jpg", alt: "Forest Photography" },
+  { id: 7, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757166451/Bird.jpg", alt: "Nature Photography" },
+  { id: 8, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_6684.jpg", alt: "Blueberry Photography" },
+  { id: 9, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734852/DSC08713_tjeuzo.jpg", alt: "Football Photography" },
+  { id: 10, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102069/IMG_2734.jpg", alt: "Northern Lights Photography" },
   { id: 11, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102070/DSC04546.jpg", alt: "Nature Photography" },
   { id: 12, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_3559.jpg", alt: "Nature Photography" },
   { id: 13, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102071/DSC08626.jpg", alt: "Football Photography" },
@@ -51,18 +53,19 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      {/* Portfolio Masonry Grid */}
+      {/* Portfolio Masonry Grid with react-masonry-css */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div
-          className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]"
+        <Masonry
+          breakpointCols={{ default: 3, 1200: 2, 768: 1 }}
+          className="flex w-auto -ml-6"
+          columnClassName="pl-6"
         >
           {portfolioImages.map((image) => {
-            // Optimize Cloudinary URL for faster loading (width 800, auto format/quality)
             const optimizedSrc = image.src.includes('cloudinary.com')
               ? image.src.replace('/upload/', '/upload/w_800,q_auto,f_auto/')
               : image.src
             return (
-              <div key={image.id} className="mb-6 break-inside-avoid group hover:shadow-xl transition-all duration-300">
+              <div key={image.id} className="mb-6 group hover:shadow-xl transition-all duration-300">
                 <Image
                   src={optimizedSrc}
                   alt={image.alt}
@@ -76,7 +79,7 @@ export default function PortfolioPage() {
               </div>
             )
           })}
-        </div>
+        </Masonry>
       </div>
     </div>
   )
