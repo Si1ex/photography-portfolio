@@ -32,6 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+        {/* Canonical URL for SEO */}
+        <link rel="canonical" href="https://www.danielkurhinen.com/" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}> 
         <Suspense fallback={null}>
