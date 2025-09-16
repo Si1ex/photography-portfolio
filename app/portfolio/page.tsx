@@ -4,7 +4,7 @@ import Image from "next/image"
 import Masonry from "react-masonry-css"
 
 const portfolioImages = [
-  { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757693600/1F9E0328-7F41-4593-831D-41C5421AF1ED.jpg", alt: "Girl at the end of an alley" },
+  { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1758009541/2EC074F0-8BE0-4129-B437-A6059AEFC006.jpg", alt: "Girl at the end of an alley" },
   { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
   { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757693600/1F9E0328-7F41-4593-831D-41C5421AF1ED.jpg", alt: "Woman smoking in an alley" },
   { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734853/DSC08696_fwwga0.jpg", alt: "Football Photography" },
