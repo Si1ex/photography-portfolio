@@ -32,8 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        {/* Canonical URL for SEO */}
-        <link rel="canonical" href="https://www.danielkurhinen.com/" />
+  {/* Canonical URL for SEO */}
+  <link rel="canonical" href="https://www.danielkurhinen.com/" />
+  {/* Favicon for Google search */}
+  <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}> 
         <Suspense fallback={null}>

@@ -20,14 +20,24 @@ export default function HomePage() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 flex flex-col items-center w-full">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">Daniel Kurhinen</h1>
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto text-pretty">
             Freezing atmosphere, capturing emotions, and telling stories through my lens
           </p>
-          <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-4xl">
+          <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-4xl mb-8">
             <Link href="/portfolio">View Portfolio</Link>
           </Button>
+        </div>
+
+        {/* Brands Section at Bottom */}
+        <div className="absolute bottom-8 left-0 w-full flex flex-col items-center z-20">
+          <span className="text-gray-300 italic text-base mb-2 text-center">Brands I’ve worked with:</span>
+          <img
+            src="/KuPS_logo.svg.png"
+            alt="KuPS logo"
+            className="h-24 w-auto"
+          />
         </div>
       </div>
     </div>
