@@ -35,7 +35,7 @@ export default function HomePage() {
           <span className="text-gray-300 italic text-base mb-2 text-center">Brands I’ve worked with:</span>
           <img
             src="/KuPS_logo.svg.png"
-            alt="KuPS logo"
+            alt="KuPS"
             className="h-24 w-auto"
           />
         </div>
