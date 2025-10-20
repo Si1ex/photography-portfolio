@@ -82,11 +82,11 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
               <p className="text-white leading-relaxed mb-6">
-                I primarily work with brands and companies to create impactful commercial photography. My focus is on helping businesses elevate their visual identity and tell their story through professional images.
+                I primarily work with brands and companies to create impactful commercial photography and video. My focus is on helping businesses elevate their visual identity and tell their story through high-quality visual content.
                 Available in Finnish, English, and Russian.
               </p>
               <p>
-                If your brand or company has a project in mind, let’s connect and create something exceptional together.
+                If your brand or company has a photo or video project in mind, let’s connect and create something exceptional together.
               </p>
             </div>
 

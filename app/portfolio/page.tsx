@@ -5,13 +5,24 @@ import Masonry from "react-masonry-css"
 
 const portfolioImages = [
   { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1758009541/2EC074F0-8BE0-4129-B437-A6059AEFC006.jpg", alt: "Girl at the end of an alley" },
-  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
+  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Aspen2.jpg", alt: "Aspen" },
   { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757693600/1F9E0328-7F41-4593-831D-41C5421AF1ED.jpg", alt: "Woman smoking in an alley" },
+  { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Usma1.jpg", alt: "Usma Puppy" },
+  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996230/Puijo_syksy.jpg", alt: "Puijo tower" },
+  { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Rue1.jpg", alt: "Rue Puppy" },
+  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_2736.jpg", alt: "Northern Lights Photography" },
+  { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Usma2.jpg", alt: "Usma Puppy" },
   { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734853/DSC08696_fwwga0.jpg", alt: "Football Photography" },
+  { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996528/Maire1.jpg", alt: "Maire Puppy" },
   { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102074/IMG_4309.jpg", alt: "Nature Photography" },
+  { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996528/Aspen1.jpg", alt: "Aspen Puppy" },
   { id: 6, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102066/IMG_9312.jpg", alt: "Sunset Photography" },
+  { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996653/Rue3.jpg", alt: "Rue Puppy" },
   { id: 7, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102071/DSC02800.jpg", alt: "Forest Photography" },
+  { id: 6, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996653/Rue2.jpg", alt: "Rue Puppy" },
   { id: 8, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757166451/Bird.jpg", alt: "Nature Photography" },
+  { id: 7, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996758/Usma4.jpg", alt: "Usma Puppy" },
+  { id: 8, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996758/Usma3.jpg", alt: "Usma Puppy" },
   { id: 9, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102068/IMG_6684.jpg", alt: "Blueberry Photography" },
   { id: 10, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734852/DSC08713_tjeuzo.jpg", alt: "Football Photography" },
   { id: 11, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102069/IMG_2734.jpg", alt: "Northern Lights Photography" },
@@ -61,12 +72,12 @@ export default function PortfolioPage() {
           className="flex w-auto -ml-6"
           columnClassName="pl-6"
         >
-          {portfolioImages.map((image) => {
+          {portfolioImages.map((image, index) => {
             const optimizedSrc = image.src.includes('cloudinary.com')
               ? image.src.replace('/upload/', '/upload/w_800,q_auto,f_auto/')
               : image.src
             return (
-              <div key={image.id} className="mb-6 group hover:shadow-xl transition-all duration-300">
+              <div key={`portfolio-${index}`} className="mb-6 group hover:shadow-xl transition-all duration-300">
                 <Image
                   src={optimizedSrc}
                   alt={image.alt}
