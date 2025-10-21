@@ -3,6 +3,7 @@ import { Navigation } from "@/components/navigation"
 import Image from "next/image"
 import Masonry from "react-masonry-css"
 
+
 const portfolioImages = [
   { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1758009541/2EC074F0-8BE0-4129-B437-A6059AEFC006.jpg", alt: "Girl at the end of an alley" },
   { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Aspen2.jpg", alt: "Aspen" },
