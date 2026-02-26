@@ -13,7 +13,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111519/20260120-DSC05810.jpg')`,
+            backgroundImage: `url('https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772113376/DSC05810-1.jpg')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
