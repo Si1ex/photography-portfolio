@@ -6,7 +6,7 @@ import Masonry from "react-masonry-css"
 
 const portfolioImages = [
   { id: 1, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111507/DSC05804.jpg", alt: "Sitting watching Northern Lights" },
-  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111452/DSC07339.jpg", alt: "BW Ares watching left" },
+  { id: 2, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772197588/DSC07339-2.jpg", alt: "Ares watching left" },
   { id: 3, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772113376/DSC05810-1.jpg", alt: "Standing watching Northern Lights" },
   { id: 4, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1758009541/2EC074F0-8BE0-4129-B437-A6059AEFC006.jpg", alt: "Girl at the end of an alley" },
   { id: 5, src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Aspen2.jpg", alt: "Aspen" },
