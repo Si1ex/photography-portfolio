@@ -37,7 +37,7 @@ export default function HomePage() {
             <img
               src="/KuPS_logo.svg.png"
               alt="KuPS"
-              className="w-[90px] h-[92px]"
+              className="w-[60px] h-[86px]"
             />
             <img
               src="/2Goals.png"
