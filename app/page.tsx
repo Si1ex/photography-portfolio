@@ -30,14 +30,21 @@ export default function HomePage() {
           </Button>
         </div>
 
-        {/* Brands Section at Bottom */}
-        <div className="absolute bottom-8 left-0 w-full flex flex-col items-center z-20">
-          <span className="text-gray-300 italic text-base mb-2 text-center">Brands I’ve worked with:</span>
-          <img
-            src="/KuPS_logo.svg.png"
-            alt="KuPS"
-            className="h-24 w-auto"
-          />
+        {/* Brands Section at Bottom Right */}
+        <div className="absolute bottom-8 right-8 flex flex-col items-start z-20 pr-4">
+          <span className="text-gray-300 italic text-base mb-2">Brands I’ve worked with:</span>
+          <div className="flex items-center space-x-4">
+            <img
+              src="/KuPS_logo.svg.png"
+              alt="KuPS"
+              className="h-12 w-auto"
+            />
+            <img
+              src="/2Goals.png"
+              alt="2Goals"
+              className="h-12 w-auto"
+            />
+          </div>
         </div>
       </div>
     </div>
