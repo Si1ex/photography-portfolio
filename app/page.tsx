@@ -40,7 +40,7 @@ export default function HomePage() {
               className="w-[60px] h-[86px]"
             />
             <img
-              src="/2Goals.png"
+              src="/2Goalsup.png"
               alt="2Goals"
               className="w-[132px] h-[85px]"
             />
