@@ -37,12 +37,12 @@ export default function HomePage() {
             <img
               src="/KuPS_logo.svg.png"
               alt="KuPS"
-              className="h-12 w-auto"
+              className="w-[90px] h-[92px]"
             />
             <img
               src="/2Goals.png"
               alt="2Goals"
-              className="h-12 w-auto"
+              className="w-[132px] h-[85px]"
             />
           </div>
         </div>
