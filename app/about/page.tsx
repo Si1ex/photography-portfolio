@@ -33,18 +33,23 @@ export default function AboutPage() {
             <div className="space-y-4 text-white leading-relaxed">
               <p>
                 Hello. My name is Daniel Kurhinen, and I am a 25-year-old student from Kuopio, Finland. I have been interested in photography 
-                since I was a kid, always trying to capture moments through a lens. As I grew older, my interest turned into a passion, and 
-                in the spring of 2025 I finally decided to buy my first camera. Before that, I photographed only with my phone. Getting
+                since I was a child, always trying to capture moments through a lens. As I grew older, my interest turned into a passion, and 
+                in the spring of 2025, I finally decided to buy my first camera. Before that, I photographed only with my phone. Getting
                 a real camera was the next big step forward in my photography journey.
               </p>
               <p>
-                What I enjoy most about photography is the freedom of creativity. It allows me to see things from different perspectives and 
-                notice details I might otherwise overlook. With my photos, I try to convey the atmosphere and the story behind each moment. 
-                For me, photography is not just about taking pictures — it’s about expressing emotions and sharing a piece of how I see the world.
+                In the summer of 2025, I expanded into cinematic aftermovies and highlight video work. I began producing dynamic visual stories
+                for events and sports, and in December I gained access to film one of the world’s best footballers during the Crystal Palace - KuPS
+                game in London. That experience pushed me to take cinematic video production more seriously and professionally, and turn it into valuable content for my clients.
               </p>
               <p>
-                My goal is to continue developing as a photographer and to keep learning with every photo. On this website, you can explore my portfolio,
-                see some of my favorite works, and if you like what you see, don’t hesitate to get in touch. I’m always open to new projects and collaborations.
+                I film cinematic highlight videos for footballers, their agents, and football clubs. Three videos I made from the Crystal Palace vs KuPS game
+                pulled 200,000 views combined for KuPS, demonstrating the reach and impact of quality visual content in the football industry.
+              </p>
+              <p>
+                My goal is to continue developing as a videographer, photographer, and video editor. On this website, you can explore my portfolio,
+                see some of my favorite works, and if you like what you see, don’t hesitate to get in touch. I’m always open to new projects and
+                collaborations.
               </p>
             </div>
           </div>

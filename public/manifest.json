@@ -1,0 +1,17 @@
+{
+  "name": "Daniel Kurhinen - Photography & Videography Portfolio",
+  "short_name": "Daniel Kurhinen",
+  "description": "Cinematic videography and photography portfolio specializing in highlight reels for footballers and sports content.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Specific disallow rules
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.danielkurhinen.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1
