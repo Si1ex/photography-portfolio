@@ -47,4 +47,4 @@ Daniel Kurhinen
 - [Vercel](https://vercel.com) for deployment and hosting
 
 ## Website Description (for GitHub)
-My own photography portfolio website. Features a modern, responsive design, contact form with email automation, and a dynamic image gallery. Built with Next.js, v0.app, ChatGPT, Resend, Cloudinary, Namecheap, and Vercel.
+My own photography portfolio website. Features a modern, responsive design, contact form with email automation, and a dynamic image gallery. Built with Next.js, v0.app, ChatGPT, Copilot, Resend, Cloudinary, Namecheap, and Vercel.
