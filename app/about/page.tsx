@@ -38,9 +38,9 @@ export default function AboutPage() {
                 a real camera was the next big step forward in my photography journey.
               </p>
               <p>
-                In the summer of 2025, I expanded into cinematic aftermovies and highlight video work. I began producing dynamic visual stories
-                for events and sports, and in December I gained access to film one of the world’s best footballers during the Crystal Palace - KuPS
-                game in London. That experience pushed me to take cinematic video production more seriously and professionally, and turn it into valuable content for my clients.
+                In the summer of 2025, I started producing cinematic aftermovies and highlight videos for KuPS. In December, I was given
+                the opportunity to film one of the world’s best football players during the Crystal Palace vs. KuPS match in London.
+                That experience pushed me to take cinematic video production more seriously and professionally, and turn it into valuable content for my clients.
               </p>
               <p>
                 I film cinematic highlight videos for footballers, their agents, and football clubs. Three videos I made from the Crystal Palace vs KuPS game
