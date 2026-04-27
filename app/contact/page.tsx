@@ -118,10 +118,10 @@ export default function ContactPage() {
             <div className="pt-6">
               <h3 className="text-lg font-semibold mb-3">Follow Me</h3>
               <div className="flex space-x-4">
-                <a href="https://instagram.com/daniel.photogrphy" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/danielkvisuals" className="text-muted-foreground hover:text-primary transition-colors">
                   Instagram
                 </a>
-                <a href="https://www.tiktok.com/@daniel.photogrphy" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.tiktok.com/@danielkvisuals" className="text-muted-foreground hover:text-primary transition-colors">
                   TikTok
                 </a>
               </div>

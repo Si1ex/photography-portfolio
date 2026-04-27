@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Daniel Kurhinen - Photography & Videography Portfolio",
   description: "Cinematic videography and photography portfolio. Highlighting videos for footballers and sports.",
   keywords: ["photography", "videography", "highlight reel", "cinematic video", "filmmaker", "football", "sports editing"],
-  authors: [{ name: "Daniel Kurhinen, v0.app, ChatGPT" }],
+  authors: [{ name: "Daniel Kurhinen, v0.app, ChatGPT, Copilot" }],
   creator: "Daniel Kurhinen",
   openGraph: {
     type: "website",

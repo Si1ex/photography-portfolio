@@ -34,7 +34,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-            daniel.photography
+            danielkvisuals
           </Link>
 
           {/* Navigation Links */}
