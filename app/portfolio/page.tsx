@@ -28,22 +28,23 @@ function normalizeInstagramEmbedUrl(url: string) {
 const portfolioMedia: MediaItem[] = [
   { id: 1, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DScdTshiAM2/embed'},
   { id: 2, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111507/DSC05804.jpg", alt: "Sitting watching Northern Lights" },
-  { id: 3, type: 'video', iframeSrc: 'https://www.instagram.com/p/DWMbkdXDKFY/embed' },
+  { id: 3, type: 'video', iframeSrc: 'https://www.youtube.com/embed/6XM3Oe0NAoI?start=806' },
+  { id: 5, type: 'video', iframeSrc: 'https://www.instagram.com/p/DWMbkdXDKFY/embed' },
   { id: 4, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772113376/DSC05810-1.jpg", alt: "Standing watching Northern Lights" },
-  { id: 5, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQluGujjB8q/embed' },
+  { id: 7, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQluGujjB8q/embed' },
   { id: 6, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772197588/DSC07339-2.jpg", alt: "Ares watching left" },
-  { id: 7, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DScFU5pDH3x/embed' },
+  { id: 9, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DScFU5pDH3x/embed' },
   { id: 8, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1758009541/2EC074F0-8BE0-4129-B437-A6059AEFC006.jpg", alt: "Girl at the end of an alley" },
-  { id: 9, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQwzJ5UjMvB/embed' },
+  { id: 11, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQwzJ5UjMvB/embed' },
   { id: 10, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Aspen2.jpg", alt: "Aspen" },
-  { id: 11, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQgrdhPCEHm/embed' },
+  { id: 13, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQgrdhPCEHm/embed' },
   { id: 12, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757693600/1F9E0328-7F41-4593-831D-41C5421AF1ED.jpg", alt: "Woman smoking in an alley" },
-  { id: 13, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQ4rZXBDCXY/embed' },
+  { id: 15, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQ4rZXBDCXY/embed' },
   { id: 14, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1754734853/DSC08696_fwwga0.jpg", alt: "Footballer drinking water" },
-  { id: 15, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DVBYBnmDIpO/embed' },
-  { id: 16, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQvs7WfDOBF/embed' },
+  { id: 16, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DVBYBnmDIpO/embed' },
+  { id: 18, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DQvs7WfDOBF/embed' },
   { id: 17, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111452/DSC07265.jpg", alt: "Ares singing in red" },
-  { id: 18, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DSKKKW9jJVP/embed' },
+  { id: 20, type: 'video', iframeSrc: 'https://www.instagram.com/reel/DSKKKW9jJVP/embed' },
   { id: 19, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1760996527/Usma1.jpg", alt: "Usma Puppy" },
   { id: 20, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772111452/DSC06794.jpg", alt: "Ares singing in blue" },
   { id: 22, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1772112368/DSC05500.jpg", alt: "Woman wathing metro arriving" },
@@ -89,7 +90,6 @@ const portfolioMedia: MediaItem[] = [
   { id: 62, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102070/DSC04466.jpg", alt: "Architecture Photography" },
   { id: 63, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757102074/DSC01477.jpg", alt: "Street Photography" },
   { id: 64, type: 'image', src: "https://res.cloudinary.com/dhjbxoyfw/image/upload/v1757151375/DSC01941.jpg", alt: "Football Photography" },
-  // Example video entry - replace with your actual Instagram embed URL
   
 ]
 
@@ -135,12 +135,17 @@ export default function PortfolioPage() {
                 </div>
               )
             } else if (media.type === 'video') {
+              const src = media.iframeSrc
+              const isYouTube = src.includes('youtube.com') || src.includes('youtu.be')
+              const iframeSrc = isYouTube ? src : normalizeInstagramEmbedUrl(src)
+
               return (
                 <div key={`portfolio-${index}`} className="mb-6 group hover:shadow-xl transition-all duration-300">
                   <div className="w-full rounded-lg overflow-hidden">
                     <iframe
-                      src={normalizeInstagramEmbedUrl(media.iframeSrc)}
-                      className="w-full h-[480px] sm:h-[560px] rounded-lg border-0"
+                      src={iframeSrc}
+                      className={isYouTube ? "w-full rounded-lg border-0" : "w-full h-[480px] sm:h-[560px] rounded-lg border-0"}
+                      style={isYouTube ? { aspectRatio: '16/9' } : undefined}
                       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                       allowFullScreen
                       loading="lazy"
